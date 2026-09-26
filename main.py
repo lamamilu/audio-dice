@@ -1,8 +1,12 @@
+# runs on mac, changes needed to work on rasberry pi
 import random
 import wave
 import subprocess
 from piper import PiperVoice
 
+# files needed: 
+#    es_ES-sharvard-medium.onnx
+#    es_ES-sharvard-medium.onnx.json
 voice = PiperVoice.load("es_ES-sharvard-medium.onnx")
 user = input()
 
@@ -14,3 +18,5 @@ while True:
 
      subprocess.run(["afplay", "test.wav"])
      user = input()
+
+
